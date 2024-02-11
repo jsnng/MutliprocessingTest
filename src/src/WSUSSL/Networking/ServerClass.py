@@ -186,9 +186,8 @@ class Server:
                     self.active[id] = TIME
                     return data
                 print(data)
-        except Exception as e:
-            print(e)
-            pass
+        except socket.timeout:
+            return
             
                 
     def broadcast_all(self, msg: str):

@@ -1,6 +1,6 @@
-from baseSkill import BaseSkill
-from Action import Action
-from worldModel import Model as wm
+from WSUSSL.TeamControl.Skills.baseskill import BaseSkill
+from WSUSSL.Shared.action import Action
+from WSUSSL.World.model import Model as wm
 import math
 import numpy as np
 

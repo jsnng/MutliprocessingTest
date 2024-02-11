@@ -1,0 +1,11 @@
+.saves
+*_samples.png
+__pycache__
+
+bin/
+lib/
+pyvenv.cfg
+*.egg-info
+
+.DS_Store
+._*

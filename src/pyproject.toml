@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "WSUSSL"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "shapely",
+    "matplotlib",
+    "scikit-learn"
+]
+
+dynamic = [
+    "version"
+]
+
+[tools.setuptools.packages.find]
+where = ["src"]
+
+[tools.setuptools.dynamic]
+version = {attr = "WSUSSL.__version__"}

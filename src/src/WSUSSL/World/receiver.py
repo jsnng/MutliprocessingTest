@@ -1,7 +1,7 @@
 from WSUSSL.World.proto2 import ssl_vision_wrapper_pb2
 from WSUSSL.World.proto2 import grSim_Packet_pb2
 from WSUSSL.World.proto2 import grSim_Commands_pb2
-from worldModel import Model as wm # in short of world_model
+from WSUSSL.World.model import Model as wm # in short of world_model
 
 import socket
 import time
