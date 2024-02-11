@@ -7,22 +7,21 @@ from WSUSSL.Shared.utils import main as UI
 from WSUSSL.TeamControl.Skills.GoTowards import GoTowards as goto
 
 
-if __name__ ==  '__main__':
-    # call world.model wm
-    world_model = wm()
-    #world_receiver = receiver('',12345)
-    #world_receiver = receiver()
-    #world_receiver.set_world_model(world_model)
+# if __name__ ==  '__main__':
+#     # call world.model wm
+#     world_model = wm()
+#     #world_receiver = receiver('',12345)
+#     #world_receiver = receiver()
+#     #world_receiver.set_world_model(world_model)
 
-    #world_receiver.listen()
+#     #world_receiver.listen()
 
-    server = Server(0)
+#     server = Server(0)
 
-    # connect to other script (sending wm)
-    while True:
-        #world_receiver.listen()
-        robot_id = int(input("Enter Robot ID"))
-        skill = goto(world_model,robot_id)
-        skill.execute()
-        server.send_action()
-        # server.send_action(go_to_ball(world_model,6))
+#     # connect to other script (sending wm)
+#     while True:
+#         #world_receiver.listen()
+#         robot_id = int(input("Enter Robot ID"))
+#         skill = goto(world_model,robot_id)
+#         server.send_action()
+#         # server.send_action(go_to_ball(world_model,6))

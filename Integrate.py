@@ -2,10 +2,11 @@ from multiprocessing import Process, Manager, Event, freeze_support, Pipe, Pool
 import time
 import socket
 
-from serverClass import Server
-from goTo import GoTowards as goto
-from reciver import proto2_ssl_vision_py_receiver as ssl_reciever
-from worldModel import Model as wm
+from WSUSSL.Networking.ServerClass import Server
+from WSUSSL.TeamControl.Skills import GoTowards as goto
+from WSUSSL.TeamControl.teamcontrol import TeamControl
+from WSUSSL.World.receiver import proto2_ssl_vision_py_receiver as ssl_reciever
+from WSUSSL.World.model import Model as wm
 
 
 def multiprocess():
