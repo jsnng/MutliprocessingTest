@@ -9,7 +9,7 @@ dependencies = [
     "numpy",
     "shapely",
     "matplotlib",
-    "scikit-learn"
+    "scikit-learn",
     "protobuf"
 ]
 
