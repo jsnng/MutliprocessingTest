@@ -5,35 +5,34 @@ import socket
 from WSUSSL.Networking.ServerClass import Server
 from WSUSSL.TeamControl.Skills import GoTowards as goto
 from WSUSSL.TeamControl.teamcontrol import TeamControl
-from WSUSSL.World.receiver import proto2_ssl_vision_py_receiver as ssl_reciever
+from WSUSSL.World.receiver import ssl_vision_receiver
+from WSUSSL.World.receiver import grsim_coms
 from WSUSSL.World.model import Model as wm
 
 
 def multiprocess():
-    freeze_support()
+    # freeze_support()
 
-    controllers = Manager()
-    namespace = controllers.Namespace()
+    # controllers = Manager()
+    #namespace = controllers.Namespace()
 
-    event = Event()
+    # pipe = Pipe()
     world = wm()
-    #server = Server()
-    reciever = ssl_reciever()
-    reciever.set_world_model(world)
-    reciever.receive()
-
+    #receiver = ssl_vision_receiver(world)
+    receiver = grsim_coms(world)
+    receiver.listen_world()
+    #server = Server(0)
+    
     # update is the reciever updating the world values
-    update = Process(target=reciever.listen())
+    update = Process(target=receiver.listen_world)
     # coms is the server processes
-    #coms = Process(target=Server(),args=(1))
+    # coms = Process(target=Server(0))
 
 
     update.start()
-    #gunc.start()
     #coms.start()
 
-    update.join()
-    #gunc.join()
+   # update.join()
     #coms.join()
 
 if __name__ == '__main__':

@@ -1,7 +1,7 @@
 import sys
 import os
 
-from WSUSSL.World.receiver import update_world_model
+#from WSUSSL.World.receiver import update_world_model
 from WSUSSL.Shared.action import Action
 from WSUSSL.TeamControl.Skills.sampleskill import SampleSkill
 
@@ -13,7 +13,7 @@ class TeamControl:
         self.world_model = world_model
         self.skills = skills  # A collection of skills
         self.current_skill = None
-        self.update_world_model = update_world_model(world_model)
+        self.update_world_model = None #update_world_model(world_model)
 
     def select_skill(self):
         # Logic to select the appropriate skill based on the world model
